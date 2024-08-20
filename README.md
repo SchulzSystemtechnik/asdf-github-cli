@@ -1,13 +1,12 @@
 # asdf-github-cli
 
-![CI](https://github.com/bartlomiejdanek/asdf-github-cli/workflows/CI/badge.svg?branch=master)
-
 [GitHub CLI](https://github.com/cli/cli) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
 ## Install
 
-```
-asdf plugin-add github-cli https://github.com/bartlomiejdanek/asdf-github-cli.git
+```bash
+asdf plugin-add gh https://github.com/SchulzSystemtechnik/asdf-github-cli.git && \
+asdf install gh latest
 ```
 
 ## Use
