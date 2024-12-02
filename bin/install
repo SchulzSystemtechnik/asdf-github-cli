@@ -77,8 +77,10 @@ install_github_cli() {
   echo "Run: asdf <global | local> github-cli ${version}"
   chmod +x $bin_path
 
-  echo "Configure $HOME/.gitconfig with gh asdf shims path"
-  sed -i 's|\.asdf/installs/gh/[^/]\+/bin/gh|.asdf/shims/gh|g' "$HOME/.gitconfig"
+  if [ -f "$HOME/.gitconfig" ]; then
+    echo "Configure $HOME/.gitconfig with gh asdf shims path"
+    sed -i 's|\.asdf/installs/gh/[^/]\+/bin/gh|.asdf/shims/gh|g' "$HOME/.gitconfig"
+  fi
 }
 
 get_download_url() {
